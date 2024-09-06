@@ -1,0 +1,25 @@
+{
+  "name": "shitt-highlight",
+  "displayName": "shitt-highlight",
+  "description": "Highlight for ShiTT",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "shitt",
+      "aliases": ["shitt", "shitt"],
+      "extensions": [".shitt .shit"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "shitt",
+      "scopeName": "source.shitt",
+      "path": "./syntaxes/shitt.tmLanguage.json"
+    }]
+  }
+}

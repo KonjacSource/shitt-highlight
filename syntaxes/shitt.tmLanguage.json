@@ -1,0 +1,61 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "ShiTT",
+  "scopeName": "source.shitt",
+  "patterns": [
+    { "include" : "#keywords"},
+    { "include": "#comments" }
+  ],
+  "fileTypes": [
+    "shit",
+    "shitt"
+  ],
+  "repository": {
+
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(data|fun|where|def|case|of|U|import|module)\\b",
+          "name": "keyword.control.shitt"
+        },
+        {
+          "match": ":",
+          "name": "keyword.operator"
+        }
+      ]
+    },
+
+    "comments": {
+      "patterns" :[ {
+	  	  	"name": "comment",
+	  	  	"begin": "--",
+	  	  	"end": "\\n",
+	  	  	"beginCaptures": {
+	  	  		"0": {
+	  	  			"name": "comment.line"
+	  	  		}
+	  	  	},
+	  	  	"endCaptures": {
+	  	  		"0": {
+	  	  			"name": "comment.line"
+	  	  		}
+	  	  	}
+	      },
+        {
+	  	  	"name": "comment.",
+	  	  	"begin": "\\{\\-",
+	  	  	"end": "\\-\\}",
+	  	  	"beginCaptures": {
+	  	  		"0": {
+	  	  			"name": "comment.block"
+	  	  		}
+	  	  	},
+	  	  	"endCaptures": {
+	  	  		"0": {
+	  	  			"name": "comment.block"
+	  	  		}
+	  	  	}
+	      }]
+    }
+  }
+}

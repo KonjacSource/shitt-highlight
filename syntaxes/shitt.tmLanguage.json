@@ -15,7 +15,7 @@
     "keywords": {
       "patterns": [
         {
-          "match": "\\b(data|fun|where|def|case|of|U|import|module)\\b",
+          "match": "\\b(data|fun|where|def|case|of|U|import|module|higher|inductive|when)\\b",
           "name": "keyword.control.shitt"
         },
         {
